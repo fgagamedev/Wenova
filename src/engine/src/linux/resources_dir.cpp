@@ -5,5 +5,5 @@ using std::string;
 string
 resources_dir_path()
 {
-    return "resources/";
+    return "res/";
 }

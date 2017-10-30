@@ -3,7 +3,7 @@
 #include <mach-o/dyld.h>
 
 string
-resources_dir_path() const
+resources_dir_path()
 {
     static string dir_path = "";
 

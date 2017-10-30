@@ -2,8 +2,9 @@
 #define CONFIG_H
 
 #include <string>
+#include "engine.h"
 
-#define RES_FOLDER string("res/")
+#define RES_FOLDER resources_dir_path()
 
 using std::string;
 

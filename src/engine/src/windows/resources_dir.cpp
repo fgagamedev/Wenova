@@ -1,7 +1,7 @@
 #include "engine.h"
 
 string
-resources_dir_path() const
+resources_dir_path()
 {
-    return "resources/";
+    return "res/";
 }

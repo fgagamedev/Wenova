@@ -1,7 +1,7 @@
 #ifndef INPUTMANAGER_H
 #define INPUTMANAGER_H
 
-#include "SDL2/SDL.h"
+#include "SDL.h"
 
 #include <unordered_map>
 #include <map>
