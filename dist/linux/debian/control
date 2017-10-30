@@ -1,0 +1,10 @@
+Package: %%PACKAGE_NAME%%
+Version: %%PACKAGE_VERSION%%
+Section: games
+Priority: optional
+Architecture: amd64
+Depends: libc6
+Maintainer: %%MAINTAINER_NAME%% <%%MAINTAINER_CONTACT%%>
+Description: %%GAME_DESCRIPTION%%
+ Long description
+ The space before each line is important

@@ -1,0 +1,39 @@
+export PLATFORM=macos
+
+# Compiler setup
+export CC=clang
+export CFLAGS=-W -Wall -Werror -std=c++11
+
+RELEASE_CFLAGS=-O2
+DEBUG_CFLAGS=-g -O0
+
+ifeq ($(MODE),debug)
+	CFLAGS+=$(DEBUG_CFLAGS)
+else
+	CFLAGS+=$(RELEASE_CFLAGS)
+endif
+
+# Tools
+export AR=ar
+export AR_FLAGS=rcs
+export LINKER=clang
+
+# Environment variables
+export INCLUDES_FLAG=-I
+export LIBPATH_FLAG=-L
+export EXT_LIBPATH_FLAG=-F
+export LIBS_FLAG=-l
+export EXT_LIBS_FLAG=-framework 
+export OBJ_OUTPUT_FLAG=-o 
+export AR_OUTPUT_FLAG=
+export OUTPUT_FLAG=-o 
+export GEN_OBJECT_FLAG=-c
+export STATIC_LIB_EXTENSION=.a
+export STATIC_LIB_PREFIX=lib
+export STATIC_LIB_SUFFIX=
+export OBJ_EXTENSION=.o
+
+# Platform specific libs
+export EXTRA_LIBS=-lc++ -rpath @executable_path/../Frameworks
+
+include Makefile.common

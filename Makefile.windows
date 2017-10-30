@@ -1,0 +1,41 @@
+export PLATFORM=windows
+
+# Compiler setup
+export CC=runcl.bat
+export CFLAGS=/W4 /nologo /EHsc
+
+RELEASE_CFLAGS=/O2
+DEBUG_CFLAGS=/Zi /Od
+
+ifeq ($(MODE),debug)
+	CFLAGS+=$(DEBUG_CFLAGS)
+else
+	CFLAGS+=$(RELEASE_CFLAGS)
+endif
+
+# Tools
+export AR=runlib.bat
+export LINKER=runlink.bat
+
+# Environment variables
+export INCLUDES_FLAG=/I 
+export LIBPATH_FLAG=/LIBPATH:
+export EXT_LIBPATH_FLAG=/LIBPATH:
+export LIBS_FLAG=
+export EXT_LIBS_FLAG=
+export OBJ_OUTPUT_FLAG=/Fo:
+export AR_OUTPUT_FLAG=/OUT:
+export OUTPUT_FLAG=/OUT:
+export GEN_OBJECT_FLAG=/c
+export STATIC_LIB_EXTENSION=.lib
+export STATIC_LIB_PREFIX=
+export STATIC_LIB_SUFFIX=.lib
+export EXTERNAL_LIB_SUFFIX=.lib
+export OBJ_EXTENSION=.obj
+export CYGWIN_VOLUME=/cygdrive/d/
+export WINDOWS_VOLUME=D:/
+
+# Platform specific libs
+export EXTRA_LIBS=SDLmain.lib
+
+include Makefile.common
