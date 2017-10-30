@@ -2,7 +2,7 @@ export PLATFORM=linux
 
 # Compiler setup
 export CC=g++
-export CFLAGS=-W -Wall -std=c++11
+export CFLAGS=-W -Wall -Werror -std=c++11
 
 RELEASE_CFLAGS=-O2
 DEBUG_CFLAGS=-g -O0

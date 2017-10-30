@@ -3,5 +3,5 @@
 string
 resources_dir_path()
 {
-    return "res/";
+    return "resources/";
 }
