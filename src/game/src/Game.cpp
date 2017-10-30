@@ -169,6 +169,10 @@ void Game::update_resolution() {
 	SDL_RenderSetLogicalSize(renderer, 1280, 720);
 
 	SDL_GetWindowSize(window, &width, &height);
+	if(width == 1 and height == 1){
+		width = 800;
+		height = 600;
+	}
 	SDL_SetWindowSize(window, width, height);
 
 	printf("W: %d, H: %d\n", width, height);
