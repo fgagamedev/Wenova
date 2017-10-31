@@ -4,6 +4,7 @@
 #include "Config.h"
 
 #include <cstdlib>
+#include <ctime>
 
 Game * Game::instance = nullptr;
 
@@ -20,20 +21,20 @@ Game::Game(string title){
 
 	int sdl_init = SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_TIMER | SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER);
 	if(sdl_init){
-		printf("%s\n", SDL_GetError());
+		printf("SDL_Init: %s\n", SDL_GetError());
 		exit(-1);
 	}
 
 	int img_flags = IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF;
 	int img_init = IMG_Init(img_flags);
 	if(img_init != img_flags){
-		printf("%s\n", SDL_GetError());
+		printf("IMG_Init: %s\n", SDL_GetError());
 		exit(-1);
 	}
 
 	window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, cwidth, cheight, 0);
 	if(window == nullptr){
-		printf("%s\n", SDL_GetError());
+		printf("SDL_CreateWindow: %s\n", SDL_GetError());
 		exit(-1);
 	}
 
@@ -41,7 +42,7 @@ Game::Game(string title){
 
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	if(renderer == nullptr){
-		printf("%s\n", SDL_GetError());
+		printf("SDL_CreateRenderer: %s\n", SDL_GetError());
 		exit(-1);
 	}
 
@@ -50,19 +51,19 @@ Game::Game(string title){
 	int mix_flags = MIX_INIT_OGG;
 	int sdl_mix = Mix_Init(mix_flags);
 	if(sdl_mix != mix_flags){
-		printf("%s\n", SDL_GetError());
+		printf("Mix_Init: %s\n", SDL_GetError());
 		exit(-1);
 	}
 
 	int mix_open = Mix_OpenAudio(MIX_DEFAULT_FREQUENCY, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024);
 	if(mix_open){
-		printf("%s\n", SDL_GetError());
+		printf("Mix_OpenAudio: %s\n", SDL_GetError());
 		exit(-1);
 	}
 
 	int ttf_init = TTF_Init();
 	if(ttf_init){
-		printf("%s\n", TTF_GetError());
+		printf("TTF_Init: %s\n", TTF_GetError());
 		exit(-1);
 	}
 

@@ -7,6 +7,7 @@
 #include <string>
 
 #include <cstdlib>
+#include <ctime>
 
 using std::to_string;
 
