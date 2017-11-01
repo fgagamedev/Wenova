@@ -1,6 +1,6 @@
 # Wenova - Rise of Conquerors
 
-![Logo](res/readme/logo.png)
+![Logo](resources/readme/logo.png)
 
 ## Sumário
 * [1. Descrição do Jogo](#1-descrição-do-jogo)  
@@ -34,64 +34,64 @@ Nessa grande exploração espacial e procura de novos mundos, esses dois encontr
 
 [TL;DR Vá para Gameplay](#23-gameplay)
 
-![Menu1](res/readme/menu1.png)
+![Menu1](resources/readme/menu1.png)
 <p align="center">Menu do Inicial Jogo</p>
 
-![Menu1](res/readme/menu2.png)
+![Menu1](resources/readme/menu2.png)
 <p align="center">Menu do Jogo</p>
 
-![Menu1](res/readme/options.png)
+![Menu1](resources/readme/options.png)
 <p align="center">Tela de Opções do Jogo</p>
 
-![Menu1](res/readme/joystick.png)
+![Menu1](resources/readme/joystick.png)
 <p align="center">Tela de Controle do Joystick</p>
 
-![Menu1](res/readme/keyboard.png)
+![Menu1](resources/readme/keyboard.png)
 <p align="center">Tela de Controle do Teclado</p>
 
-![Menu1](res/readme/joystick_test.png)
+![Menu1](resources/readme/joystick_test.png)
 <p align="center">Tela de Teste do Joystick</p>
 
-![Menu1](res/readme/stage_select.png)
+![Menu1](resources/readme/stage_select.png)
 <p align="center">Tela de Seleção de Estágio</p>
 
-![Menu1](res/readme/character_select1.png)
+![Menu1](resources/readme/character_select1.png)
 <p align="center">Tela de Seleção de Personagem</p>
 
-![Menu1](res/readme/character_select2.png)
+![Menu1](resources/readme/character_select2.png)
 <p align="center">Tela para Inicialização do Jogo</p>
 
-![Menu1](res/readme/character_select3.png)
+![Menu1](resources/readme/character_select3.png)
 <p align="center">Tela para Inicialização do Jogo (Outros personagens)</p>
 
-![Menu1](res/readme/waterfall3.png)
+![Menu1](resources/readme/waterfall3.png)
 <p align="center">Fase Waterfall 1</p>
 
-![Menu1](res/readme/waterfall2.png)
+![Menu1](resources/readme/waterfall2.png)
 <p align="center">Fase Waterfall 2</p>
 
-![Menu1](res/readme/waterfall1.png)
+![Menu1](resources/readme/waterfall1.png)
 <p align="center">Fase Waterfall 3</p>
 
-![Menu1](res/readme/mangrove4.png)
+![Menu1](resources/readme/mangrove4.png)
 <p align="center">Fase Mangrove 1</p>
 
-![Menu1](res/readme/mangrove3.png)
+![Menu1](resources/readme/mangrove3.png)
 <p align="center">Fase Mangrove 2</p>
 
-![Menu1](res/readme/mangrove2.png)
+![Menu1](resources/readme/mangrove2.png)
 <p align="center">Fase Mangrove 3</p>
 
-![Menu1](res/readme/mangrove1.png)
+![Menu1](resources/readme/mangrove1.png)
 <p align="center">Fase Mangrove 4</p>
 
-![Menu1](res/readme/victory_team1.png)
+![Menu1](resources/readme/victory_team1.png)
 <p align="center">Tela de Vitória do Time 1</p>
 
-![Menu1](res/readme/victory_team2.png)
+![Menu1](resources/readme/victory_team2.png)
 <p align="center">Tela de Vitória do Time 2</p>
 
-![Menu1](res/readme/draw.png)
+![Menu1](resources/readme/draw.png)
 <p align="center">Tela de Empate</p>
 
 
@@ -125,9 +125,9 @@ As ações principais do jogador estão listadas abaixo:
 
 Abaixo se encontram os mapeamentos das teclas dos joysticks e do teclado, respectivamente (em inglês):
 
-![joystick](res/readme/joystick.png)
+![joystick](resources/readme/joystick.png)
 
-![keyboard](res/readme/keyboard.png)
+![keyboard](resources/readme/keyboard.png)
 
 ## 4. Outras Informações
 ### 4.1. Dependências
