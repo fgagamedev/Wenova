@@ -6,20 +6,35 @@
 # Include project metadata
 . metadata.ini
 
-OUTPUT_FILE=$PACKAGE_NAME.exe
+WXS_PATH="dist/windows/$PACKAGE_NAME.wxs"
+OUTPUT_FILE=$EXECUTABLE_NAME.exe
+PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_RELEASE
 
-function gen_exe()
-{
+function gen_exe() {
+	rm -rf bin/windows
+	mkdir -p bin/windows
+
+	for DIR in $(ls -D lib);
+	do
+		cp -P lib/$DIR/windows/release/* bin/windows
+	done;
+
+	# if ! [ -e $WXS_PATH ];
+	# then
+	scripts/util/gen_wxs.sh
+	# fi
+
 	mkdir -p .tmp
-	cp -u src/$EXECUTABLE_NAME\_release .tmp/$EXECUTABLE_NAME.exe
-	cp -u lib/SDL/windows/release/*.dll .tmp/
-	cp -u lib/SDL_image/windows/release/*.dll .tmp/
-	cp -u lib/SDL_image/windows/release/LICENSE* .tmp/
-	cp -u dist/windows/$PACKAGE_NAME.wxs .tmp/
-	cp -u dist/windows/Manual.pdf .tmp/
+	cp -u src/$EXECUTABLE_NAME\_release .tmp/$OUTPUT_FILE
+
+	cp -u bin/windows/* .tmp/
+	cp -f $WXS_PATH .tmp/$PACKAGE_NAME.wxs
+
+	# cp -u dist/windows/Manual.pdf .tmp/
 	cp -ur resources .tmp/
 
-	cd .tmp 
+	cd .tmp
+
 	candle.exe $PACKAGE_NAME.wxs
 	light.exe -sice:ICE60 -ext WixUIExtension $PACKAGE_NAME.wixobj
 	cp $PACKAGE_NAME.msi ..

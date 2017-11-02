@@ -20,7 +20,9 @@ obj
 *.swp
 *.swo
 
-src/wenova_debug
-src/wenova_release
+src/wenova_debug*
+src/wenova_release*
 
 *.a
+
+.tmp
