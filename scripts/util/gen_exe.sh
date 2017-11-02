@@ -19,10 +19,10 @@ function gen_exe() {
 		cp -P lib/$DIR/windows/release/* bin/windows
 	done;
 
-	# if ! [ -e $WXS_PATH ];
-	# then
-	scripts/util/gen_wxs.sh
-	# fi
+	if ! [ -e $WXS_PATH ];
+	then
+		scripts/util/gen_wxs.sh
+	fi
 
 	mkdir -p .tmp
 	cp -u src/$EXECUTABLE_NAME\_release .tmp/$OUTPUT_FILE

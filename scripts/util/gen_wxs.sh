@@ -48,7 +48,7 @@ function append_file_tag() {
 	ID=`clean_id $1`
 	cat >> $WXS_PATH <<EOF
 	<File
-		Id="_${ID^^}"
+		Id="${ID^^}"
 		Name="${FILE_NAME##*/}"
 		DiskId='1'
 		Source="$FILE_NAME"/>
@@ -76,7 +76,7 @@ function append_directory_tag() {
 	DIR_NAME=$1
 	ID=`clean_id $1`
 	cat >> $WXS_PATH <<EOF
-	<Directory Id="_${ID^^} Name="$DIR_NAME">
+	<Directory Id="${ID^^}DIR" Name="${DIR_NAME##*/}">
 EOF
 }
 
@@ -95,7 +95,7 @@ function append_shortcut_tag () {
 		Directory="$DIRECTORY"
 		Name="$PACKAGE_NAME $PACKAGE_VERSION"
 		WorkingDirectory='INSTALLDIR'
-		Icon="$ICON_FILE"
+		Icon="_$ICON_FILE"
 		IconIndex="0"
 		Advertise="yes"/>
 EOF
@@ -129,11 +129,11 @@ function check_directory_for_file() {
 		FILE_PATH="$BASE_DIR/$FILE"
 		if [ -d $FILE_PATH ];
 		then
-			append_directory_tag $FILE
+			append_directory_tag $FILE_PATH
 			check_directory_for_file $FILE_PATH
 			close_tag "Directory"
 		else
-			append_component_tag $FILE
+			append_component_tag $FILE_PATH
 			append_file_tag $FILE_PATH
 			close_tag "Component"
 		fi
@@ -208,7 +208,7 @@ EOF
 function gen_directory() {
 	create_directory_file
 	append_shortcut_tag "ProgramMenuDir"
-	append_shortcut_tag "DESKTOPFOLDERDIR"
+	append_shortcut_tag "_DESKTOPFOLDERDIR"
 	close_tag "Component"
 
 	append_component_tag "SDL"
