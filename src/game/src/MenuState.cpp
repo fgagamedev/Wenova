@@ -34,12 +34,12 @@ MenuState::MenuState(bool main_menu){
 	green_ship = Sprite("menu/green_ship.png", 8, FRAME_TIME, 0, 2);
 	red_ship = Sprite("menu/red_ship.png", 8, FRAME_TIME);
 
-	start_option = new Text("font/8-BIT WONDER.ttf", 30, Text::TextStyle::SOLID, "PRESS START", LIGHT_GREEN, FONT_X, FONT_Y);
+	start_option = new Text("font/8-BIT_WONDER.ttf", 30, Text::TextStyle::SOLID, "PRESS START", LIGHT_GREEN, FONT_X, FONT_Y);
 
-	options.push_back(new Text("font/8-BIT WONDER.ttf", 30, Text::TextStyle::SOLID, "START", WHITE, FONT_X, FONT_Y));
-	options.push_back(new Text("font/8-BIT WONDER.ttf", 30, Text::TextStyle::SOLID, "EDIT", WHITE, FONT_X, FONT_Y));
-	options.push_back(new Text("font/8-BIT WONDER.ttf", 30, Text::TextStyle::SOLID, "OPTIONS", WHITE, FONT_X, FONT_Y));
-	options.push_back(new Text("font/8-BIT WONDER.ttf", 30, Text::TextStyle::SOLID, "EXIT", WHITE, FONT_X, FONT_Y));
+	options.push_back(new Text("font/8-BIT_WONDER.ttf", 30, Text::TextStyle::SOLID, "START", WHITE, FONT_X, FONT_Y));
+	options.push_back(new Text("font/8-BIT_WONDER.ttf", 30, Text::TextStyle::SOLID, "EDIT", WHITE, FONT_X, FONT_Y));
+	options.push_back(new Text("font/8-BIT_WONDER.ttf", 30, Text::TextStyle::SOLID, "OPTIONS", WHITE, FONT_X, FONT_Y));
+	options.push_back(new Text("font/8-BIT_WONDER.ttf", 30, Text::TextStyle::SOLID, "EXIT", WHITE, FONT_X, FONT_Y));
 
 	InputManager::get_instance()->set_analogic_value(32000);
 	InputManager::get_instance()->map_keyboard_to_joystick(InputManager::MENU_MODE);

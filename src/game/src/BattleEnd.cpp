@@ -8,7 +8,7 @@ using std::to_string;
 BattleEnd::BattleEnd(int id_winner){
 	back_btn = Sprite("victory/buttons/back.png");
 
-	back_txt = new Text("font/8-BIT WONDER.ttf", 22, Text::TextStyle::SOLID, "BACK", WHITE);
+	back_txt = new Text("font/8-BIT_WONDER.ttf", 22, Text::TextStyle::SOLID, "BACK", WHITE);
 	back_txt->set_pos(1154, 650);
 
 	back_selected = false;

@@ -39,14 +39,14 @@ JoystickConfigState::JoystickConfigState(int joystick_id, bool ckeyboard){
 	joystick_help = Sprite("joysticks/help/controls_help.png");
 	test_btn = Sprite("joysticks/help/a.png");
 	back_btn = Sprite("joysticks/help/b.png");
-	test_txt = new Text("font/8-BIT WONDER.ttf", 22, Text::TextStyle::SOLID, "TEST", WHITE);
-	back_txt = new Text("font/8-BIT WONDER.ttf", 22, Text::TextStyle::SOLID, "BACK", WHITE);
+	test_txt = new Text("font/8-BIT_WONDER.ttf", 22, Text::TextStyle::SOLID, "TEST", WHITE);
+	back_txt = new Text("font/8-BIT_WONDER.ttf", 22, Text::TextStyle::SOLID, "BACK", WHITE);
 
-	press = new Text("font/8-BIT WONDER.ttf", 22, Text::TextStyle::SOLID, "PRESS", LIGHT_GREEN, 640, 300);
-	select_text = new Text("font/8-BIT WONDER.ttf", 25, Text::TextStyle::SOLID, "SELECT", BLUE, 500, 350);
-	and_text = new Text("font/8-BIT WONDER.ttf", 22, Text::TextStyle::SOLID, "AND", LIGHT_GREEN, 640, 350);
-	start_text = new Text("font/8-BIT WONDER.ttf", 25, Text::TextStyle::SOLID, "START", BLUE, 760, 350);
-	to_go_back = new Text("font/8-BIT WONDER.ttf", 22, Text::TextStyle::SOLID, "TO GO BACK", LIGHT_GREEN, 640, 400);
+	press = new Text("font/8-BIT_WONDER.ttf", 22, Text::TextStyle::SOLID, "PRESS", LIGHT_GREEN, 640, 300);
+	select_text = new Text("font/8-BIT_WONDER.ttf", 25, Text::TextStyle::SOLID, "SELECT", BLUE, 500, 350);
+	and_text = new Text("font/8-BIT_WONDER.ttf", 22, Text::TextStyle::SOLID, "AND", LIGHT_GREEN, 640, 350);
+	start_text = new Text("font/8-BIT_WONDER.ttf", 25, Text::TextStyle::SOLID, "START", BLUE, 760, 350);
+	to_go_back = new Text("font/8-BIT_WONDER.ttf", 22, Text::TextStyle::SOLID, "TO GO BACK", LIGHT_GREEN, 640, 400);
 
 	test_txt->set_pos(970, 650);
 	back_txt->set_pos(1154, 650);

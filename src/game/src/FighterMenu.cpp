@@ -8,7 +8,7 @@ FighterMenu::FighterMenu(){
 
 FighterMenu::FighterMenu(string cname, int frames, bool cenabled){
 	name = cname;
-	name_text = new Text("font/8-BIT WONDER.ttf", 20, Text::TextStyle::SOLID, name, YELLOW);
+	name_text = new Text("font/8-BIT_WONDER.ttf", 20, Text::TextStyle::SOLID, name, YELLOW);
 	enabled = cenabled;
 	n_frames = frames;
 
