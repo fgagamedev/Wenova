@@ -1,7 +1,7 @@
 #include "Game.h"
 #include "MenuState.h"
 
-int main(int, char **){
+int main(){
 	Game game("Wenova - Rise of Conquerors");
 
 	State * state =  new MenuState(false);
@@ -12,6 +12,6 @@ int main(int, char **){
 	return 0;
 }
 
-int WinMain(int, char **){
+int WinMain(){
 	return main();
 }

@@ -117,7 +117,7 @@ void Fighter::notify_collision(GameObject & object){
 
 	//FIXME tá feio
 	float floor_y = object.box.y + (box.x - object.box.x) * tan(object.rotation) - object.box.height * 0.5;
-	if(object.is("floor") && speed.y >= 0 && abs(floor_y - (box.y + box.height * 0.5)) < 10){
+	if(object.is("floor") && speed.y >= 0 && fabs(floor_y - (box.y + box.height * 0.5)) < 10){
 		if(pass_through_timer.get() < 30 and object.is("platform"))
 			return;
 
